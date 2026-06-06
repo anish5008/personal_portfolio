@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Experience | Aniskaa</title>
+    <link rel = "stylesheet" href = "{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class = "portfolio-container">
+        <a href = "/" class = "back-home-btn">← Back to Gateway</a>
+
+        <main class="glass-card page-focus-view">
+            <h2>Professional Experience</h2>
+            <ul class="resume-list">
+                {% for item in experiences %}
+                <li>
+                    <strong>{{ item.role }}</strong> | {{ item.company }}
+                    <span class="date-tag">{{ item.date }}</span>
+                </li>
+                {% endfor %} </ul>
+        </main>
+    </div>
+</body>
+</html>

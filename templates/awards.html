@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Awards & Works | Aniskaa </title>
+    <link rel = "stylesheet" href = "{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class = "portfolio-container">
+        <a href = "/" class = "back-home-btn">← Back to Gateway</a>
+        <main class = "glass-card page-focus-view">
+            <h2>Published Works & Featured Awards</h2>
+            <ul class = "resume-list">
+                {% for award in awards %}
+                <li>
+                    <strong>{{ award.title }}: </strong>{{ award.context }}
+
+                    {% if award.tag %}
+                    <span class = "award-tag">{{ award.tag }}</span>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
