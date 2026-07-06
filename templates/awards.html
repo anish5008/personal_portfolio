@@ -2,27 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <title>Awards & Works | Aniskaa </title>
-    <link rel = "stylesheet" href = "{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards & Literary Works</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <div class = "portfolio-container">
-        <a href = "/" class = "back-home-btn">← Back to Gateway</a>
-        <main class = "glass-card page-focus-view">
-            <h2>Published Works & Featured Awards</h2>
-            <ul class = "resume-list">
-                {% for award in awards %}
-                <li>
-                    <strong>{{ award.title }}: </strong>{{ award.context }}
+<body class="royal-theme">
 
-                    {% if award.tag %}
-                    <span class = "award-tag">{{ award.tag }}</span>
-                    {% endif %}
-                </li>
-                {% endfor %}
-            </ul>
-        </main>
+    <div class="portfolio-container">
+        <a href="{{ url_for('home') }}" class="back-home-btn">← Return to Gateway</a>
+
+        <div class="page-layout-with-sidebar">
+            <div class="royal-sidebar-accent">
+                <div class="sidebar-diamond">◆</div>
+                <div class="sidebar-line"></div>
+            </div>
+
+            <div class="page-focus-view">
+                <h2 class="section-title">Literary Works & Journalism</h2>
+                <div class="royal-divider-small"></div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">Summer 2025</span>
+                    <h3 class="entry-heading">AUTHOR & POET</h3>
+                    <p class="entry-description">Poem 'Drifting Apart' published by Live Poets Society of NJ.</p>
+                </div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">Gen Z Guide</span>
+                    <h3 class="entry-heading">FINANCIAL LITERACY AUTHOR</h3>
+                    <p class="entry-description">Published 'A Lazy Teen's Guide to Save Money' — financial advice tailored for Gen Z.</p>
+                </div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">Digital Edition</span>
+                    <h3 class="entry-heading">FOUNDER</h3>
+                    <p class="entry-description">Beyond Books Literary Magazine — Managed and organized international digital distribution.</p>
+                </div>
+
+                <h2 class="section-title" style="margin-top:20px;">Competitive Awards</h2>
+                <div class="royal-divider-small"></div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">2025 & 2026</span>
+                    <h3 class="entry-heading">TWO-TIME WINNER</h3>
+                    <p class="entry-description">Deck the Bins Art Competition | 72 regional winners selected out of 400 entries in 2025 and 72 regional winners selected out of 300 entries in 2026.</p>
+                </div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">Regional Level</span>
+                    <h3 class="entry-heading">3RD PLACE REGIONAL WINNER</h3>
+                    <p class="entry-description">North Florida Tamil Sangam's First-Ever Kolam Competition | Celebrated for intricate traditional visual art layout.</p>
+                </div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">FBLA</span>
+                    <h3 class="entry-heading">STATE QUALIFIER</h3>
+                    <p class="entry-description">FBLA (Future Business Leaders of America)</p>
+                </div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">International</span>
+                    <h3 class="entry-heading">STATE FINE ART COMPETITOR</h3>
+                    <p class="entry-description">State Level Drawing Competition hosted at the Nexus Mall in Chennai, India.</p>
+                </div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">JCP</span>
+                    <h3 class="entry-heading">SELECTED PHOTOGRAPHER</h3>
+                    <p class="entry-description">Honored as a featured portfolio selection in the Junior Photography Competition.</p>
+                </div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">Cultural Honor</span>
+                    <h3 class="entry-heading">CULTURAL FINE ART WINNER</h3>
+                    <p class="entry-description">Earned a Special Mention in the Jacksonville Tamil Mandram Pongal Drawing Competition.</p>
+                </div>
+
+                <h2 class="section-title" style="margin-top:20px;">Honors & Metrics</h2>
+                <div class="royal-divider-small"></div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">Global Security</span>
+                    <h3 class="entry-heading">BORLAUG SCHOLAR</h3>
+                    <p class="entry-description">World Food Prize Academic Honor Metric for research into global food security infrastructure.</p>
+                </div>
+
+                <div class="timeline-entry-block">
+                    <span class="white-circle-badge">May 2026</span>
+                    <h3 class="entry-heading">FLORIDA SEAL OF BILITERACY</h3>
+                    <p class="entry-description">Awarded by the state for high advanced fluency in Tamil.</p>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>

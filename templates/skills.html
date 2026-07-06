@@ -2,22 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <title>Toolkit | Aniskaa</title>
-    <link rel = "stylesheet" href = "{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Toolkit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <div class = "portfolio-container">
-        <a href = "/" class = "back-home-btn">← Back to Gateway</a>
+<body class="royal-theme">
 
-        <main class = "glass-card page-focus-view">
-            <h2>Technical Toolkit & Courses</h2>
-            <div class = "skills-grid">
-                {% for skill in skills %}
-                <div class="skill-tag">{{ skill }}</div>
-                {% endfor %}
+    <div class="portfolio-container">
+        <a href="{{ url_for('home') }}" class="back-home-btn">← Return to Gateway</a>
+
+        <div class="page-layout-with-sidebar">
+            <div class="royal-sidebar-accent">
+                <div class="sidebar-diamond">◆</div>
+                <div class="sidebar-line"></div>
             </div>
-        </main>
+
+            <div class="page-focus-view">
+                <h2 class="section-title">Technical Toolkit</h2>
+                <div class="royal-divider-small"></div>
+
+                <div class="skills-grid-royal">
+                    <div class="skill-brick-gold">Python</div>
+                    <div class="skill-brick-gold">Flask</div>
+                    <div class="skill-brick-gold">HTML / CSS</div>
+                    <div class="skill-brick-gold">JavaScript</div>
+                    <div class="skill-brick-gold">SQL / Databases</div>
+                    <div class="skill-brick-gold">Git / Version Control</div>
+                    <div class="skill-brick-gold">Machine Learning Foundations</div>
+                    <div class="skill-brick-gold">Data Analysis (Pandas/NumPy)</div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>

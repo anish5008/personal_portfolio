@@ -2,29 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name = "viewpoint" content = "width=device-width, initial-scale=1.0">"
-    <title>Aniskaa Vijayashankar | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniskaa Vijayashankar | Royal Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <div class = "gateway-wrapper">
-        <header class = "glass-card gateway-card">
-            <div class = "profile-glow-cirle">
-                <span>📸 PHOTO</span>
+<body class="royal-theme">
+
+    <div class="gateway-wrapper">
+        <div class="crown-card split-layout">
+
+            <div class="gateway-left">
+                <div class="profile-frame-rect">
+                    <img src="{{ url_for('static', filename='profile.png') }}" alt="Aniskaa" class="profile-img-rect">
+                </div>
             </div>
 
-            <h1>Aniskaa Vijayashankar</h1>
-            <p class = "subtitle">High School Diploma | Graduated: May 2026</p>
-            <p class = gateway-bia>Welcome to my Space. I am a incoming college freshman who
-                loves learning, creating and sharing ideas. This website is
-                a space where I showcase projects and experiences. </p>
+            <div class="gateway-right">
+                <h1 class="royal-title">ANISKAA VIJAYASHANKAR</h1>
+                <p class="subtitle">👑 Incoming College Freshman | Computer Science & AI</p>
+                <div class="royal-divider-small"></div>
+                <p class="gateway-bio">
+                    Welcome to my space. I am a builder, creator, and strategist who bridges the logical architecture of technology with the creative rhythm of fine arts and journalism. Explore my pathways below to witness my technical milestones, business triumphs, and creative honors.
+                </p>
 
-            <div class = "gateway-buttons">
-                <a href = "/experience" class = "portal-btn">My Experiences</a>
-                <a href = "/awards" class = "portal-btn">Awards and Works</a>
-                <a href = "/skills" class = "portal-btn" >Technical toolkit</a>
+                <div class="gateway-buttons">
+                    <a href="{{ url_for('experience') }}" class="portal-btn">Experience</a>
+                    <a href="{{ url_for('awards_page') }}" class="portal-btn">Awards & Works</a>
+                    <a href="{{ url_for('skills') }}" class="portal-btn">Technical Toolkit</a>
+                    <a href="{{ url_for('hobbies') }}" class="portal-btn">Hobbies</a>
+                    <a href="{{ url_for('achievements') }}" class="portal-btn">High School Achievements</a>
+                </div>
             </div>
-        </header>
+
+        </div>
     </div>
+
 </body>
 </html>
