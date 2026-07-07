@@ -2,7 +2,7 @@
 
 Welcome to my personal platform! This is a multi-page web application built using Flask (Python), tailored with custom CSS Grid layout elements.
 
-The app features a wide, interactive side-by-side split screen landing design showcasing my incoming college freshman path into Computer Science & AI, along with clean, white circular milestone badges tracking my timeline history.
+The app features a wide, interactive side-by-side split screen design showcasing my incoming college freshman path into Computer Science & AI, along with clean milestone badges tracking my highschool history.
 
 ## 📂 Project Blueprint
 * `main.py` - Core Python Flask application routing logic.
@@ -20,3 +20,12 @@ The app features a wide, interactive side-by-side split screen landing design sh
 1. **Navigate to the folder:**
    ```bash
    cd personal_portfolio
+
+2. Initialize your virtual environment & install dependencies:
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install flask
+
+3. Fire up the Flask server environment:
+   python main.py
+
