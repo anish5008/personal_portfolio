@@ -1,22 +1,31 @@
-# 👑 Aniskaa's Portfolio
+Aniskaa's Portfolio
 
-Welcome to my personal platform! This is a multi-page web application built using Flask (Python), tailored with custom CSS Grid layout elements.
+Welcome to my personal website! This is a multi-page web application built using Flask in Python with custom CSS Grid layout.
 
-The app features a wide, interactive side-by-side split screen landing design showcasing my incoming college freshman path into Computer Science & AI, along with clean, white circular milestone badges tracking my timeline history.
+The app features a interactive screen design showcasing my incoming college freshman path into Computer Science & AI, along with milestone badges tracking my highschool history.
 
-## 📂 Project Blueprint
-* `main.py` - Core Python Flask application routing logic.
-* `static/style.css` - Custom design sheets, button animation frameworks, and layout definitions.
+📂 Project Blueprint
+* `main.py` - Core Python Flask application logic.
+* `static/style.css` - Custom design sheets.
 * `templates/` - HTML structure files:
-  * `index.html` - The side-by-side entry gateway.
-  * `skills.html` - Technical toolkit grid layout.
-  * `experience.html` - Professional and community milestones.
-  * `awards.html` - Literary creations, honors, and competitive accolades.
-  * `hobbies.html` - Performing arts and running history showcase.
-  * `achievements.html` - High school honor societies and leadership tracking.
+  * `index.html` - The side-by-side entry page.
+  * `skills.html` - Technical knowledge.
+  * `experience.html` - Professional and community involvement.
+  * `awards.html` - Literary works, honors, and competitive events.
+  * `hobbies.html` - Performing arts and running history.
+  * `achievements.html` - High school honor societies and leadership.
 
 ## 🛠️ How to Run Locally
 
-1. **Navigate to the folder:**
+1. Open to the folder:
    ```bash
    cd personal_portfolio
+
+2. Initialize your virtual environment & install dependencies:
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install flask
+
+3. Open the Flask server environment:
+   python main.py
+
