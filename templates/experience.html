@@ -3,61 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience & Milestones</title>
+    <title>Experience</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body class="royal-theme">
-
     <div class="portfolio-container">
-        <a href="{{ url_for('home') }}" class="back-home-btn">← Return to Gateway</a>
-
+        <a href="{{ url_for('home') }}" class="back-home-btn">
+            ← Return to Gateway
+        </a>
         <div class="page-layout-with-sidebar">
             <div class="royal-sidebar-accent">
                 <div class="sidebar-diamond">◆</div>
                 <div class="sidebar-line"></div>
             </div>
-
             <div class="page-focus-view">
-                <h2 class="section-title">Professional & Technical Milestones</h2>
+                <h2 class="section-title">
+                    Experience
+                </h2>
                 <div class="royal-divider-small"></div>
-
+                {% for experience in experiences %}
                 <div class="timeline-entry-block">
-                    <span class="white-circle-badge">Jan 2026 - Present</span>
-                    <h3 class="entry-heading">CURRENT INTERNSHIP</h3>
-                    <p class="entry-subheading">Building-U</p>
-                    <p class="entry-description">Contributing to technical projects, data architectures, and exploring real-world applications of computer science.</p>
+                    <span class="white-circle-badge">
+                        {{ experience.date }}
+                    </span>
+                    <h3 class="entry-heading">
+                        {{ experience.title }}
+                    </h3>
+                    <p class="entry-subheading">
+                        {{ experience.company }}
+                    </p>
+                    <p class="entry-description">
+                        {{ experience.desc }}
+                    </p>
                 </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">Summer 2025</span>
-                    <h3 class="entry-heading">SUMMER COHORT SCHOLAR</h3>
-                    <p class="entry-subheading">Girls Who Code National Cohort</p>
-                    <p class="entry-description">Immersive study in software engineering frameworks, web development cycles, and collaborative project management.</p>
-                </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">2025</span>
-                    <h3 class="entry-heading">HACKATHON PARTICIPANT</h3>
-                    <p class="entry-subheading">HackClub Campfire</p>
-                    <p class="entry-description">Designed, built, and shipped functional technical MVPs under intense sprint deadlines during the global campfire hackathon.</p>
-                </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">11th Grade (First Half)</span>
-                    <h3 class="entry-heading">VOLUNTEER ART TUTOR</h3>
-                    <p class="entry-subheading">Addarsh After School Academy</p>
-                    <p class="entry-description">Designed creative instructional plans and mentored young students in foundational sketching and painting techniques.</p>
-                </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">2025</span>
-                    <h3 class="entry-heading">AI SKILLS FEST BADGE WINNER</h3>
-                    <p class="entry-subheading">Microsoft</p>
-                    <p class="entry-description">Earned official credentialing in foundational artificial intelligence concepts and core machine learning paradigms.</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
-
 </body>
 </html>

@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniskaa Vijayashankar | Royal Portfolio</title>
+    <title>Aniskaa Vijayashankar | Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body class="royal-theme">
-
     <div class="gateway-wrapper">
         <div class="crown-card split-layout">
-
             <div class="gateway-left">
                 <div class="profile-frame-rect">
-                    <img src="{{ url_for('static', filename='profile.png') }}" alt="Aniskaa" class="profile-img-rect">
+                    <img
+                        src="{{ url_for('static', filename='profile.png') }}"
+                        alt="Portrait of Aniskaa Vijayashankar"
+                        class="profile-img-rect">
                 </div>
             </div>
-
             <div class="gateway-right">
-                <h1 class="royal-title">ANISKAA VIJAYASHANKAR</h1>
-                <p class="subtitle">👑 Incoming College Freshman | Computer Science & AI</p>
+                <h1 class="royal-title">
+                    Aniskaa Vijayashankar
+                </h1>
+                <p class="subtitle">
+                    👑 Incoming Computer Science Student | Interested in AI
+                </p>
                 <div class="royal-divider-small"></div>
                 <p class="gateway-bio">
-                    Welcome to my space. I am a builder, creator, and strategist who bridges the logical architecture of technology with the creative rhythm of fine arts and journalism. Explore my pathways below to witness my technical milestones, business triumphs, and creative honors.
+                    Hi! I'm Aniskaa. I enjoy building projects, learning new technologies,
+                    and expressing my creativity through writing, art, and dance.
+                    This portfolio highlights some of my experiences, achievements,
+                    technical skills, and hobbies.
                 </p>
-
                 <div class="gateway-buttons">
-                    <a href="{{ url_for('experience') }}" class="portal-btn">Experience</a>
-                    <a href="{{ url_for('awards_page') }}" class="portal-btn">Awards & Works</a>
-                    <a href="{{ url_for('skills') }}" class="portal-btn">Technical Toolkit</a>
-                    <a href="{{ url_for('hobbies') }}" class="portal-btn">Hobbies</a>
-                    <a href="{{ url_for('achievements') }}" class="portal-btn">High School Achievements</a>
+                    <a href="{{ url_for('experience') }}" class="portal-btn">
+                        Experience
+                    </a>
+                    <a href="{{ url_for('awards_page') }}" class="portal-btn">
+                        Awards & Publications
+                    </a>
+                    <a href="{{ url_for('skills') }}" class="portal-btn">
+                        Technical Skills
+                    </a>
+                    <a href="{{ url_for('hobbies') }}" class="portal-btn">
+                        Hobbies
+                    </a>
+                    <a href="{{ url_for('achievements') }}" class="portal-btn">
+                        High School Achievements
+                    </a>
                 </div>
             </div>
-
         </div>
     </div>
-
 </body>
 </html>

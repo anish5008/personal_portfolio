@@ -7,73 +7,47 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body class="royal-theme">
-
     <div class="portfolio-container">
-        <a href="{{ url_for('home') }}" class="back-home-btn">← Return to Gateway</a>
-
+        <a href="{{ url_for('home') }}" class="back-home-btn">
+            ← Return to Gateway
+        </a>
         <div class="page-layout-with-sidebar">
             <div class="royal-sidebar-accent">
                 <div class="sidebar-diamond">◆</div>
                 <div class="sidebar-line"></div>
             </div>
-
             <div class="page-focus-view">
-                <h2 class="section-title">Honor Societies & Executive Leadership</h2>
+                <h2 class="section-title">Honor Societies & Leadership</h2>
                 <div class="royal-divider-small"></div>
-
+                {% for item in cords_and_societies %}
                 <div class="timeline-entry-block">
-                    <span class="white-circle-badge">NAHS</span>
-                    <h3 class="entry-heading">NATIONAL ART HONOR SOCIETY SECRETARY</h3>
-                    <p class="entry-description">Elected officer handling logistics and communications.</p>
+                    <h3 class="entry-heading">
+                        {{ item.title }}
+                    </h3>
+                    <p class="entry-description">
+                        {{ item.desc }}
+                    </p>
                 </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">Graduation Honors</span>
-                    <h3 class="entry-heading">HONOR CORD RECIPIENT</h3>
-                    <p class="entry-description">Earned active distinction graduation cords for National Honor Society (NHS), National English Honor Society (NEHS), National Art Honor Society (NAHS), Best Buddies and Key Club.</p>
-                </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">Sponsorships</span>
-                    <h3 class="entry-heading">ROBOTICS CLUB FUNDRAISER MANAGER</h3>
-                    <p class="entry-description">Spearheaded community sponsorships to secure a critical $1,500 rookie team operational budget.</p>
-                </div>
-
-                <h2 class="section-title" style="margin-top:20px;">Campus Activities & Strategic Impact</h2>
+                {% endfor %}
+                <h2 class="section-title" style="margin-top: 20px;">
+                    Activities & Leadership
+                </h2>
                 <div class="royal-divider-small"></div>
-
+                {% for item in activities %}
                 <div class="timeline-entry-block">
-                    <span class="white-circle-badge">9th & 10th Grade</span>
-                    <h3 class="entry-heading">JROTC TEAM CAPTAIN</h3>
-                    <p class="entry-description">Led structural drill, and physical training as an appointed organizational student captain.</p>
+                    <span class="white-circle-badge">
+                        {{ item.time }}
+                    </span>
+                    <h3 class="entry-heading">
+                        {{ item.title }}
+                    </h3>
+                    <p class="entry-description">
+                        {{ item.desc }}
+                    </p>
                 </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">11th Grade</span>
-                    <h3 class="entry-heading">ROAD SAFETY PATROL MEMBER</h3>
-                    <p class="entry-description">Managed environmental safety procedures for campus security operations.</p>
-                </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">High School</span>
-                    <h3 class="entry-heading">BUSINESS CLUBS</h3>
-                    <p class="entry-description">Competed and trained within the Future Business Leaders of America (FBLA) and DECA business management chapters.</p>
-                </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">9th & 10th Grade</span>
-                    <h3 class="entry-heading">BEST BUDDIES CHAPTER MEMBER</h3>
-                    <p class="entry-description">Volunteered in peer support systems dedicated to enhancing inclusive global student communities.</p>
-                </div>
-
-                <div class="timeline-entry-block">
-                    <span class="white-circle-badge">High School</span>
-                    <h3 class="entry-heading">SCHOOL PLAYS</h3>
-                    <p class="entry-description">Performed lead dramatic roles in two major high school stage productions: an original play detailing the 'Miracles of Jesus' and William Shakespeare's 'The Tempest'.</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
-
 </body>
 </html>
