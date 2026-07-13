@@ -188,6 +188,7 @@ def achievements():
             "desc": "Completed the Donna Half Marathon (13.1 miles) and participated in several other races."
         }
     ]
+
     return render_template('achievements.html', cords_and_societies=cords_and_societies, activities=activities)
 
 if __name__ == '__main__':
