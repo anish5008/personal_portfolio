@@ -1,31 +1,50 @@
-Aniskaa's Portfolio
+# Personal Portfolio Website
 
-Welcome to my personal website! This is a multi-page web application built using Flask in Python with custom CSS Grid layout.
+Welcome to my personal portfolio website! This is a multi-page web application built with **Flask**, **HTML**, and **CSS**. The site highlights my experiences, technical skills, awards, hobbies, and leadership activities as I prepare to begin my studies in Computer Science.
 
-The app features a interactive screen design showcasing my incoming college freshman path into Computer Science & AI, along with milestone badges tracking my highschool history.
+## Project Structure
 
-📂 Project Blueprint
-* `main.py` - Core Python Flask application logic.
-* `static/style.css` - Custom design sheets.
-* `templates/` - HTML structure files:
-  * `index.html` - The side-by-side entry page.
-  * `skills.html` - Technical knowledge.
-  * `experience.html` - Professional and community involvement.
-  * `awards.html` - Literary works, honors, and competitive events.
-  * `hobbies.html` - Performing arts and running history.
-  * `achievements.html` - High school honor societies and leadership.
+* `app.py` – Main Flask application that handles routing and passes data to the templates.
+* `static/style.css` – Custom stylesheet for the website's design and layout.
+* `templates/`
 
-## 🛠️ How to Run Locally
+  * `index.html` – Homepage
+  * `experience.html` – Experience and community involvement
+  * `skills.html` – Technical skills
+  * `awards.html` – Awards, publications, and honors
+  * `hobbies.html` – Hobbies and extracurricular activities
+  * `achievements.html` – Leadership roles and high school achievements
 
-1. Open to the folder:
-   ```bash
-   cd personal_portfolio
 
-2. Initialize your virtual environment & install dependencies:
-   python3 -m venv .venv
-   source .venv/bin/activate
-   pip install flask
+## How to Run Locally
 
-3. Open the Flask server environment:
-   python main.py
+1. Navigate to the project folder:
 
+```bash
+cd personal_portfolio
+```
+
+2. Create and activate a virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+3. Install Flask:
+
+```bash
+pip install flask
+```
+
+4. Start the application:
+
+```bash
+python app.py
+```
+
+5. Open your browser and visit:
+
+```
+http://127.0.0.1:5000/
+```
